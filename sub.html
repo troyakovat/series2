@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подписки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prosto One', Arial, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        header nav {
+            background: #8B0000;
+            padding: 15px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        main p {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #cccccc;
+        }
+
+        #items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .item {
+            background: #2a2a2a;
+            border: 2px solid #444;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .item h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .item .price {
+            font-size: 18px;
+            color: #00cc88;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .item .desc {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+
+        .item .art {
+            background: #8B0000;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .item .art:hover {
+            background: #a52a2a;
+        }
+
+        @media (max-width: 768px) {
+            #items {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navi" style="background-color: #8B0000; padding: 15px; text-align: center;">
+            <a href="main.html" class="nav-link" style="color: white; margin: 0 10px; text-decoration: none;">Главная</a>
+            <a href="genres.html" class="nav-link" style="color: white; margin: 0 10px; text-decoration: none;">По жанрам</a>
+            <a href="https://www.kinopoisk.ru" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">Кинопоиск</a>
+            <a href="sub.html" class="nav-link" style="color: lightgray; margin: 0 10px; text-decoration: none; font-weight: bold;">Подписки</a>
+            <a href="form.html" target="_self"><img height="50px" src="./pics/form pic.png"></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>С помощью нашего сайта вы можете оформить подписки на международные стриминговые сервисы!</h1>
+        <p>Чтобы мы получили Ваш запрос, укажите артикул выбранного Вами сервиса в <a href="form.html" style="color: #CD5C5C; text-decoration: none; font-weight: bold;">форме обратной связи</a>.</p>
+    </main>
+
+    <div id="items"></div>
+
+    <script src="./DOM_JS/sub.js"></script>
+</body>
+</html>
